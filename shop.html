@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SubutShop</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --main:#ff4fd8;
+  --bg:#0e1116;
+  --card1:#1f2a38;
+  --card2:#16202b;
+  --green:#4bb543;
+}
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  font-family:"Cairo","Poppins",sans-serif;
+  background:var(--bg);
+  color:#fff;
+}
+
+/* ===== NAVBAR ===== */
+.navbar{
+  width:100%;
+  background:linear-gradient(90deg,#0b1220,#121a2b);
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;
+  gap:10px;
+  box-shadow:0 0 20px rgba(255,79,216,.15);
+}
+
+.logo{
+  font-size:26px;
+  font-weight:700;
+  color:var(--main);
+  text-shadow:0 0 10px rgba(255,79,216,.7);
+}
+
+.nav-links{
+  display:flex;
+  gap:18px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+  font-size:15px;
+  transition:.3s;
+}
+.nav-links a:hover{
+  color:var(--main);
+}
+
+/* ===== CONTAINER ===== */
+.container{
+  width:100%;
+  max-width:500px;
+  padding:0 15px;
+  margin:35px auto;
+  display:flex;
+  flex-direction:column;
+  gap:25px;
+}
+/* ===== RANK BOX ===== */
+.rank-box{
+  background:linear-gradient(135deg,var(--card1),var(--card2));
+  border-radius:16px;
+  padding:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);
+  animation:fadeIn .7s ease;
+}
+
+.rank-box h2{
+  margin-top:0;
+  text-align:center;
+  font-size:20px;
+  color:#53d1ff;
+}
+
+.rank-box p{
+  font-size:14px;
+  margin:6px 0;
+  line-height:1.6;
+}
+
+/* ===== BUY BUTTON ===== */
+.btn-buy{
+  width:100%;
+  margin-top:14px;
+  padding:14px;
+  background:var(--green);
+  border:none;
+  border-radius:35px;
+  color:#fff;
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+  display:block;
+  text-align:center;
+  box-shadow:0 0 18px rgba(75,181,67,.6);
+  transition:.3s;
+}
+.btn-buy:hover{
+  background:#39a830;
+  transform:scale(1.05);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(15px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:600px){
+  .navbar{
+    flex-direction:column;
+    text-align:center;
+  }
+  .logo{
+    font-size:24px;
+  }
+  .nav-links{
+    justify-content:center;
+  }
+}
+
+@media (min-width:900px){
+  .container{
+    max-width:650px;
+  }
+  .rank-box h2{
+    font-size:22px;
+  }
+  .rank-box p{
+    font-size:15px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<div class="navbar">
+  <div class="logo">SubutShop</div>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="support.html">Support</a>
+  </div>
+</div>
+<!-- ===== SHOP ===== -->
+<div class="container">
+
+  <div class="rank-box">
+    <h2>✨ رتبة MVP</h2>
+    <p>🔹 شكل حلو</p>
+    <p>🔹 كيت جيدة</p>
+    <p>🔹 أمر <b>/hide</b></p>
+    <p style="color:#4bb543;font-weight:700;">💰 السعر: 2$ أو 2,000,000 كريدت</p>
+    <a href="https://discord.gg/subut" target="_blank" class="btn-buy">شراء الآن</a>
+  </div>
+
+  <div class="rank-box">
+    <h2>🔥 رتبة Immortal</h2>
+    <p>🔹 شكل احترافي</p>
+    <p>🔹 كيت ممتازة</p>
+    <p>🔹 أوامر: /hide /hat /bal</p>
+    <p style="color:#4bb543;font-weight:700;">💰 السعر: 10$</p>
+    <a href="https://discord.gg/subut" target="_blank" class="btn-buy">شراء الآن</a>
+  </div>
+
+  <div class="rank-box">
+    <h2>⭐ رتبة Subut+</h2>
+    <p>🔹 كل كيتات السابقة</p>
+    <p>🔹 أوامر كاملة</p>
+    <p>🔹 خصائص VIP</p>
+    <p style="color:#4bb543;font-weight:700;">💰 السعر: 15$</p>
+    <a href="https://discord.gg/subut" target="_blank" class="btn-buy">شراء الآن</a>
+  </div>
+
+</div>
+
+</body>
+</html>
