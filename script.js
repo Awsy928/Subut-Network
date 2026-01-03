@@ -1,15 +1,39 @@
-const API = "https://api.mcstatus.io/v2/status/java/subutsmp.xyz:20243";
+const ip = "subutsmp.xyz";
+const port = 20243;
 
-async function load(){
-  try{
-    const r = await fetch(API);
-    const d = await r.json();
-    document.getElementById("players").innerText =
-      d.players.online + " / " + d.players.max;
-  }catch{
-    document.getElementById("players").innerText = "Offline";
+// API لجلب حالة السيرفر وعدد اللاعبين
+const apiURL = `https://mcapi.us/server/status?ip=${ip}&port=${port}`;
+
+async function fetchServerStatus() {
+  const statusEl = document.getElementById("status");
+  const playersEl = document.getElementById("players");
+
+  try {
+    const response = await fetch(apiURL);
+    const data = await response.json();
+
+    if (data.online) {
+      statusEl.textContent = "Online";
+      statusEl.classList.remove("offline");
+      statusEl.classList.add("online");
+      playersEl.textContent = data.players.now + " لاعب";
+    } else {
+      statusEl.textContent = "Offline";
+      statusEl.classList.remove("online");
+      statusEl.classList.add("offline");
+      playersEl.textContent = "0";
+    }
+  } catch (error) {
+    statusEl.textContent = "خطأ في الاتصال";
+    statusEl.classList.remove("online");
+    statusEl.classList.add("offline");
+    playersEl.textContent = "0";
+    console.error("Error fetching server status:", error);
   }
 }
 
-load();
-setInterval(load,15000);
+// تحديث الحالة عند تحميل الصفحة
+fetchServerStatus();
+
+// تحديث كل 30 ثانية تلقائيًا
+setInterval(fetchServerStatus, 30000);
