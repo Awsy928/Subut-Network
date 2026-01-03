@@ -1,0 +1,134 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:linear-gradient(180deg,#071a2d,#0b2b46);
+color:#fff;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:rgba(0,0,0,.3);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:24px;
+font-weight:800;
+color:#ff4fd8;
+}
+
+.logo span{color:white;}
+
+nav a{
+margin-left:25px;
+color:white;
+text-decoration:none;
+font-weight:500;
+}
+
+nav a.active, nav a:hover{
+color:#ff4fd8;
+}
+
+.hero{
+text-align:center;
+margin:60px 0;
+}
+
+.neon{
+font-size:52px;
+color:#ff4fd8;
+text-shadow:0 0 20px #ff4fd8;
+}
+.hero h2{letter-spacing:6px;}
+.hero p{margin-top:10px;opacity:.9;}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+padding:40px;
+}
+
+.card{
+background:rgba(255,255,255,.05);
+border-radius:20px;
+padding:30px;
+}
+
+.card h3{
+color:#ff4fd8;
+margin-bottom:15px;
+}
+
+.big{
+font-size:32px;
+font-weight:700;
+color:#ff4fd8;
+}
+
+.status{
+padding:8px 18px;
+border-radius:20px;
+font-weight:600;
+}
+
+.online{
+background:#19c37d;
+color:black;
+}
+
+.shop, .support{
+text-align:center;
+padding:60px 20px;
+}
+
+.rank-cards{
+display:flex;
+flex-wrap:wrap;
+gap:30px;
+justify-content:center;
+margin-top:40px;
+}
+rank{
+background:rgba(255,255,255,.05);
+padding:30px;
+border-radius:20px;
+width:260px;
+}
+
+.best{
+border:2px solid #ff4fd8;
+}
+
+.rank span{
+display:block;
+margin:15px 0;
+font-size:22px;
+color:#ff4fd8;
+}
+
+button, .discord{
+padding:12px 30px;
+border:none;
+border-radius:30px;
+background:#ff4fd8;
+color:black;
+cursor:pointer;
+text-decoration:none;
+font-weight:600;
+}
+
+footer{
+text-align:center;
+padding:20px;
+opacity:.6;
+}
